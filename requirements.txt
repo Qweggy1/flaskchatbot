@@ -1,6 +1,3 @@
 flask
 tensorflow
 nltk
-random
-json
-pickle
