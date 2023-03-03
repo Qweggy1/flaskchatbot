@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>Main Page</title>
+
+    {% endblock %}
+
+  <body class="text-center">
+    
+    {% block content %}
+    <style>
+      #demonimg {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+    <h1> ⛧ M̷̪͚͉̮̝͂͌̅͆ͅį̴̛̳̰̹̭͘C̶̡̀̒͜z̵͎̙̀̈̂̐̚I̶̫̻̼̽O̸̡͍͇͜͝n̴̪̅̈́̽ ψ </h1>
+    <p> Quod erat tibi primum Error </p>
+    <img src="../static/images/cyclop-one-eye.gif" alt="demonrobot" id="demonimg">
+    <audio src="../static/images/spoopy.mp3" autoplay loop></audio>
+    <script>
+      function moveImage() {
+        var x = Math.floor(Math.random() * window.innerWidth);
+        var y = Math.floor(Math.random() * window.innerHeight);
+        document.getElementById("demonimg").style.left = x + "px";
+        document.getElementById("demonimg").style.top = y + "px";
+      }
+      setInterval(moveImage, 3000);
+    </script>
+    <div id="chatbox" class="card text-center">
+        <div id="answerbox">
+            <div class="card" id="">
+                <h2>ψ M̸̗̃́ȋ̶͍͎̙̭̀̿̉C̵̞̫̒̓́̋z̴̰̘̼̽Į̸̥͂̾̎̔̒Ő̴̥͆n̵̪̈̓̂̌͒̎ ̶̙͎͎͓̲̱́̑̒͝s̶̡̹͍͊͗͠a̶̗͝͠y̶̢͈̻̍̃̑͘s̷̡̬͙̐̔͐̍́͜ͅ.̵̳̖̲̗̺͔͛͑̄̎̍.̷̦̻̅̋̄̓̏.̶͍̣͓̲͉̹̎͒̈́ ☠</h2>
+                <div class="message-box">
+                {% for answer in answer_list %}
+                <div class="message">
+                  <p class="glow">{{answer}}</p>
+                </div>
+                {% endfor %}
+            </div>
+                <br><br>
+                <form role="form" method='POST' action='/chatbot' class="">
+                  <div class="form-group text-center" id="questionbox">
+                    <input type="text" name="message" class="" id="message-box" placeholder="Enter question" style="max-width: 300px;" autofocus required>
+                  </div>
+                  <button type="submit" style="display: none" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>

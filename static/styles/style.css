@@ -1,0 +1,92 @@
+
+  * {
+    font-family: 'Impact', sans-serif;
+    font-weight: bold;
+    background-color: black;
+    animation-name: burn;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+.message-box {
+    color: white;
+    background-color: black;
+    width: 30%;
+}
+
+
+@keyframes burn {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff5d00, 0 0 100px #ff0000, 0 0 40px #ff1500, 0 0 60px #ff0d00, 0 0 80px #ff0500, 0 0 100px #ff0000; }
+    50% { text-shadow: 0 0 5px #fff, 0 0 10px #ff5d00, 0 0 20px #ff2200, 0 0 40px #ff1500, 0 0 60px #ff0d00, 0 0 80px #ff0500, 0 0 100px #ff0000; }
+    100% { text-shadow: 0 0 5px #fff, 0 0 10px #ff5d00, 0 0 40px #ff1500, 0 0 60px #ff0d00, 0 0 80px #ff0500, 0 0 100px #ff0000, 0 0 5px darkred; }
+}
+
+@keyframes pulse {
+    0% {
+    transform: scale(1);
+    }
+    50% {
+    transform: scale(1.1);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+
+.demonimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+img {
+    animation-name: pulse;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    border: none;
+    background-color: transparent;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: red;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkred;
+ 
+}
+
+h2{
+    color: darkred;
+
+}
+
+p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkred;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkred;
+    animation-name: pulse;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+ul{
+    list-style: none;
+}
